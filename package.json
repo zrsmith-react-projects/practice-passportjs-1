@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "nodemon index.js"
   },
   "repository": {
     "type": "git",
@@ -16,5 +16,13 @@
   "bugs": {
     "url": "https://github.com/zrsmith-react-projects/practice-passportjs-1/issues"
   },
-  "homepage": "https://github.com/zrsmith-react-projects/practice-passportjs-1#readme"
+  "homepage": "https://github.com/zrsmith-react-projects/practice-passportjs-1#readme",
+  "dependencies": {
+    "ejs": "^3.0.1",
+    "express": "^4.17.1"
+  },
+  "devDependencies": {
+    "dotenv": "^8.2.0",
+    "nodemon": "^2.0.2"
+  }
 }
