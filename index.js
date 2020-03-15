@@ -19,7 +19,7 @@ app.set('view-engine', 'ejs')
 app.use(express.urlencoded({ extended: false}))
 app.use(flash())
 app.use(session({ 
-  secert: process.env.SESSION_SECRET,
+  secret: process.env.SESSION_SECRET,
   resave: false,
   saveUninitialized: false
 }))
@@ -30,7 +30,7 @@ app.get('/', (req, res) => {
   res.render('index.ejs', { name: 'Zac'})
 })
 
-app.get('/login', passport.authenticate('local', {
+app.post('/login', passport.authenticate('local', {
   successRedirect: '/',
   failureRedirect: '/login',
   failureFlash: true
@@ -56,8 +56,8 @@ app.post('/register', async (req, res) => {
   }
   console.log(users)
 })
-app.post('/login', async (req, res) => {
-
+app.get('/login', (req, res) => {
+  res.render("login.ejs")
 })
 
 
